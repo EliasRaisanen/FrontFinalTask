@@ -9,6 +9,7 @@ import DialogActions from "@mui/material/DialogActions";
 import Dialog from "@mui/material/Dialog";
 import Button from '@mui/material/Button';
 import dayjs from "dayjs";
+import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 
 function Traininglist() {
   
@@ -81,6 +82,13 @@ function Traininglist() {
 
   return (
     <>
+    <nav>
+      <ul>
+        <li>
+      <Link to={"/customerlist"}>Customerlist</Link>{''}
+      </li>
+      </ul>
+    </nav>
       <Dialog open={open} onClose={closeDeleteCheckbox}>
         <DialogTitle>Delete this training?</DialogTitle>
         <DialogActions>
